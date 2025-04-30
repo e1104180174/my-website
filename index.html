@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羅晨瑋的學習網站</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 固定 Header -->
+    <header class="bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">羅晨瑋的學習網站</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link font-weight-bold active" href="index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="about.html">關於我</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="work.html">作品集</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">聯絡我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 背景影片 -->
+    <div class="video-background">
+        <iframe 
+            src="https://www.youtube.com/embed/DBa9KttDs9c?autoplay=1&mute=1&loop=1&playlist=DBa9KttDs9c&controls=0" 
+            frameborder="0" 
+            allow="autoplay; fullscreen" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <main class="container">
+        <!-- Home 區塊 -->
+        <section id="home" class="text-center mb-5 d-flex align-items-center">
+            <div class="container content">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-left">
+                        <h1 class="display-3 font-weight-bold">嗨, 我是 <span class="text-primary">羅晨瑋</span></h1>
+                        <p class="lead">這是我在 <strong>網際網路應用開發</strong> 課程的期末個人網站。</p>
+                        <p class="lead">我是龍華科技大學資工系學生（學號：E1104181074），熱愛程式設計與技術創新，專注於 <strong>網頁開發</strong>、<strong>後端技術</strong> 與 <strong>Unity 遊戲開發</strong>。</p>
+                        <p class="lead">目前，我正在學習 <strong>人工智慧（AI）</strong> 技術，探索如何將 AI 應用於日常開發中，以提升工作效率並解決實際問題。</p>
+                        <p class="lead">在這個網站中，將與大家分享我的學習歷程與開發成果，歡迎一起交流討論！</p>
+                        <a href="about.html" class="btn btn-primary btn-lg mt-3">了解更多</a>
+                        <div class="mt-4">
+                            <a href="https://github.com/e1104180174" class="text-dark mx-2" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                            <a href="https://www.youtube.com/@ChenWeiLuo" class="text-dark mx-2" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                            <a href="https://www.linkedin.com/in/chen-wei-luo-93572233a/" class="text-dark mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/perfil.png" alt="Profile Image" class="img-fluid rounded-circle shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 滑動式圖片區塊 -->
+        <section id="carousel" class="mb-5">
+            <h1 class="text-center text-info font-weight-bold mb-5">圖片展示</h1>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/work1.png" class="d-block w-100" alt="Work 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="images/work1.png">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/work2.png" class="d-block w-100" alt="Work 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="images/work2.png">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/work3.png" class="d-block w-100" alt="Work 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="images/work3.png">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/work4.png" class="d-block w-100" alt="Work 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="images/work4.png">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/work5.png" class="d-block w-100" alt="Work 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="images/work5.png">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/work7.png" class="d-block w-100" alt="Work 7" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="images/work7.png">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- 燈箱結構 -->
+        <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="lightboxImage" src="" alt="Lightbox Image" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 塊狀內容區塊 -->
+        <section id="blocks" class="mb-5">
+            <h1 class="text-center text-info font-weight-bold mb-5">
+                <a href="work.html" class="text-decoration-none text-info">作品集</a>
+            </h1>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="https://docs.google.com/document/d/1JDqSazcp87Yb0mZKyaD8hxfDmauXl3ds7KnOJnyKO2g/edit?usp=sharing" target="_blank" class="text-decoration-none">
+                        <div class="card">
+                            <img src="images/work1.png" class="card-img-top" alt="Work 1">
+                            <div class="card-body">
+                                <h5 class="card-title">網站建構與管理</h5>
+                                <p class="card-text">在Linux系統進行網站建構與管理，使用PHP實作具有SQL功能的網站</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://docs.google.com/document/d/1gd45djSKvNr0nCGmqvFcF0prxaDoq6DeIJ8v4cTARy4/edit?usp=sharing" target="_blank" class="text-decoration-none">
+                        <div class="card">
+                            <img src="images/work2.png" class="card-img-top" alt="Work 2">
+                            <div class="card-body">
+                                <h5 class="card-title">遊戲專題實作</h5>
+                                <p class="card-text">使用Unity從零開始實作一款簡易的遊戲，嘗試設計創意的特殊功能</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://drive.google.com/drive/folders/15SgiQsgR_DRtmylj1MboV0xeI_ZVRvFo?usp=drive_link" target="_blank" class="text-decoration-none">
+                        <div class="card">
+                            <img src="images/work3.png" class="card-img-top" alt="Work 3">
+                            <div class="card-body">
+                                <h5 class="card-title">AI影像識別</h5>
+                                <p class="card-text">使用MediaPipe進行AI影像識別，捕捉人物動作，並製作簡易小遊戲</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="work.html" class="btn btn-primary btn-lg">More</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" class="btn btn-primary rounded-circle">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center mt-5 py-3">
+        <p>&copy; 2025 羅晨瑋</p>
+        <p>信箱: <a href="mailto:e1104181074@gm.lhu.edu.tw" class="text-white">e1104181074@gm.lhu.edu.tw</a></p>
+        <p>地址: <a href="https://maps.app.goo.gl/epxRomhBr9aR5zFS8" class="text-white" target="_blank">333桃園市龜山區萬壽路一段300號</a></p>
+        <div>
+            <a href="https://github.com/e1104180174" class="text-white mx-2" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.youtube.com/@ChenWeiLuo" class="text-white mx-2" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/chen-wei-luo-93572233a/" class="text-white mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

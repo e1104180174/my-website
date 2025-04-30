@@ -1,0 +1,357 @@
+body {
+    font-size: 1.125rem; /* 將全域文字大小設為 18px，比預設的 16px 更大 */
+    font-family: 'Noto Sans TC', 'Poppins', sans-serif;
+    padding-top: 70px; /* 根據 header 的高度調整 */
+    color: #0E2431;
+    background: url('/images/background-texture.png') repeat; /* 平鋪背景圖片 */
+    background-size: auto; /* 保持圖片原始大小 */
+    background-color: rgba(255, 255, 255, 0.7); /* 添加白色半透明背景 */
+    background-blend-mode: lighten; /* 淡化背景圖片，讓其更白 */
+}
+
+/* 固定 header 並添加霧面效果 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* 確保 header 在最上層 */
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 霧面效果 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+}
+
+.navbar {
+    background-color: #ffffff;
+}
+
+.nav-link {
+    color: #0E2431;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: #4070F4;
+}
+
+section {
+    scroll-margin-top: 70px; /* 與 header 的高度一致 */
+}
+
+.section-title {
+    color: #4070F4;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.button {
+    background-color: #4070F4;
+    color: #ffffff;
+    padding: 0.75rem 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.button:hover {
+    background-color: #365eab;
+}
+
+/* 背景影片樣式 */
+.video-background {
+    position: absolute; /* 改為絕對定位 */
+    top: 0;
+    left: 0;
+    /* background: lightgrey; 預設背景色 */
+    width: 100%; /* 覆蓋整個寬度 */
+    height: 100vh; /* 高度與 #home 相同 */
+    overflow: hidden;
+    z-index: -1; /* 確保影片在內容後面 */
+}
+
+.video-background iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* 確保影片覆蓋整個螢幕寬度 */
+    height: 56.25vw; /* 16:9 比例 */
+    transform: translate(-50%, -50%); /* 影片居中 */
+    pointer-events: none; /* 禁止點擊影片 */
+    opacity: 0.3; /* 透明效果 */
+    filter: grayscale(70%); /* 灰濛效果 */
+}
+
+/* Home 區塊內容樣式 */
+#home {
+    position: relative;
+    min-height: calc(100vh - 70px); /* 減去 header 的高度，確保內容不被遮擋 */
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+    text-align: left;
+    padding: 0 15px; /* 增加左右內距 */
+    overflow: hidden; /* 確保內容不會超出區塊 */
+}
+
+#home .content {
+    z-index: 1; /* 確保內容在背景影片上方 */
+    background-color: rgba(255, 255, 255, 0.3); /* 白色背景，30%透明 */
+    padding: 20px 30px; /* 增加內距 */
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    backdrop-filter: blur(5px); /* 添加霧面效果 */
+}
+
+#home h1 {
+    font-size: 3rem; /* 標題字體大小 */
+    font-weight: bold;
+    color: #0E2431; /* 深灰色標題 */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* 添加陰影 */
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.25rem; /* 描述文字大小 */
+    color: #495057; /* 中灰色文字 */
+    margin-top: 15px;
+    text-shadow: none; /* 移除陰影，提升清晰度 */
+}
+
+#home .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4070F4; /* 按鈕背景色 */
+    color: #fff; /* 按鈕文字顏色 */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 按鈕陰影 */
+}
+
+#home .btn:hover {
+    background-color: #365eab; /* 按鈕滑過時的顏色 */
+}
+
+#home img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* 圓形圖片 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 圖片陰影 */
+}
+
+#home .social-icons a {
+    color: #0E2431; /* 圖示顏色設為深灰色 */
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+#home .social-icons a:hover {
+    color: #4070F4; /* 滑過時的顏色 */
+}
+
+/* Carousel 樣式 */
+#carousel {
+    position: relative;
+    z-index: 1; /* 確保 #carousel 區塊內容在背景影片上方 */
+    /* background-color: #fff; 確保背景為白色，遮住影片 */
+    padding: 20px 0;
+    max-width: 1080px; /* 限制區塊的最大寬度 */
+    margin: 0 auto; /* 置中區塊 */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 添加陰影 */
+    border-radius: 10px; /* 圓角效果 */
+}
+
+#carousel .carousel-indicators [data-bs-target] {
+    background-color: rgba(0, 0, 0, 0.5); /* 黑色透明背景 */
+    border: 1px solid rgba(128, 128, 128, 0.5); /* 灰色透明邊框 */
+    width: 50px; /* 指示器的寬度 */
+    height: 10px; /* 指示器的高度 */
+    /* border-radius: 50%; /* 圓形指示器 */
+    margin: 0 5px; /* 指示器之間的間距 */
+}
+
+#carousel .carousel-indicators .active[data-bs-target] {
+    background-color: #4070F4; /* 活動指示器的顏色 */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* 黑色透明背景 */
+    border-radius: 50%; /* 圓形背景 */
+    padding: 10px; /* 增加內距 */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* 滑過時加深透明黑底 */
+}
+
+.carousel-inner img {
+    width: 100%; /* 確保圖片寬度填滿容器 */
+    height: auto; /* 高度自動調整，保持圖片比例 */
+    border-radius: 10px; /* 圖片圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 圖片陰影 */
+}
+
+#about img, #skills img, #work img {
+    border-radius: 20px;
+}
+
+#about .row, #skills .row {
+    align-items: center;
+}
+
+#work .row .col-md-4 {
+    margin-bottom: 1rem;
+}
+
+/* 地圖容器樣式 */
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* 限制地圖最大寬度 */
+    padding-top: 56.25%; /* 16:9 比例 */
+    margin: 0 auto; /* 置中 */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* 移除 Bootstrap 的 ::before 樣式影響 */
+.embed-responsive-16by9::before {
+    content: none;
+}
+
+.footer {
+    background-color: #0E2431;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* 回到頂部按鈕樣式 */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: none; /* 預設隱藏 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    background-color: #4070F4;
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #365eab;
+    cursor: pointer;
+}
+
+#backToTop i {
+    font-size: 1.5rem;
+}
+
+/* 淡入淡出效果 */
+#backToTop.show {
+    display: flex; /* 顯示按鈕 */
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 燈箱圖片樣式 */
+#lightboxImage {
+    max-width: 90vw; /* 限制圖片寬度為視窗寬度的 90% */
+    max-height: 90vh; /* 限制圖片高度為視窗高度的 90% */
+    width: auto; /* 確保圖片寬高比例不變 */
+    height: auto; /* 確保圖片寬高比例不變 */
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+}
+
+/* 燈箱背景樣式 */
+.modal-dialog {
+    max-width: 90vw; /* 限制燈箱寬度為視窗寬度的 90% */
+    margin: auto; /* 確保燈箱在畫面正中心 */
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.8); /* 深色背景 */
+    border: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* 移除內距 */
+}
+
+/* 修正關閉按鈕位置 */
+.modal-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-bottom: none;
+    z-index: 1050; /* 確保按鈕在最上層 */
+}
+
+.modal-header .btn-close {
+    background-color: #ffffff; /* 白色關閉按鈕 */
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+}
+
+.modal-header .btn-close:hover {
+    background-color: #f8f9fa; /* 滑過時的顏色 */
+}
+
+@media (max-width: 768px) {
+    #home {
+        min-height: auto; /* 手機上取消固定高度 */
+        padding-top: 100px; /* 增加內距，避免被 header 遮擋 */
+    }
+
+    #home .display-4 {
+        font-size: 2rem;
+    }
+
+    #home .display-3 {
+        font-size: 2rem; /* 調整標題字體大小以適應小螢幕 */
+    }
+
+    #home img {
+        width: 100%;
+        height: auto;
+    }
+
+    #home p {
+        font-size: 1rem; /* 調整段落文字大小 */
+    }
+
+    #home .btn {
+        font-size: 1rem; /* 調整按鈕文字大小 */
+    }
+
+    .map-container {
+        max-width: 100%; /* 手機上地圖寬度自適應 */
+        padding-top: 75%; /* 調整比例以適應小螢幕 */
+    }
+}

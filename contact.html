@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羅晨瑋的學習網站</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 固定 Header -->
+<header class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">羅晨瑋的學習網站</a>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link font-weight-bold active" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="about.html">關於我</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="work.html">作品集</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="contact.html">聯絡我</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+</header>
+
+<!-- 主內容 -->
+<main class="container mt-5">
+    <h1 class="text-center text-primary mb-5">聯絡我</h1>
+
+    <!-- 地圖區塊 -->
+    <section id="map" class="mb-5">
+    <h2 class="text-info text-center mb-4">我的位置</h2>
+    <div class="map-container mx-auto">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.456920031084!2d121.40001977602392!3d25.018563277826356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681d79decbf427%3A0x4d6df48c8f1bd30f!2z6b6N6I-v56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1742217156862!5m2!1szh-TW!2stw"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+    </div>
+    </section>
+
+    <!-- 聯絡表單 -->
+    <section id="contact-form" class="mb-5">
+        <h2 class="text-center">聯絡表單</h2>
+        <p class="text-center text-muted">您的訊息將傳送到 <strong>e1104181074@gm.lhu.edu.tw</strong></p>
+        <form action="mailto:e1104181074@gm.lhu.edu.tw" method="post" enctype="text/plain" onsubmit="return handleFormSubmit()">
+            <!-- 隱藏欄位：附註來自該網頁 -->
+            <input type="hidden" name="source" value="來自 羅晨瑋 個人網站的聯絡表單" />
+            <input type="hidden" id="subscribeMessage" name="subscribe" value="" />
+
+            <div class="form-group mb-3">
+                <label for="name">姓名</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="請輸入您的姓名"
+                    required
+                />
+            </div>
+            <div class="form-group mb-3">
+                <label for="email">電子郵件</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="請輸入您的電子郵件"
+                    required
+                />
+            </div>
+            <div class="form-group mb-3">
+                <label for="message">訊息</label>
+                <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="請輸入您的訊息"
+                    required
+                ></textarea>
+            </div>
+            <div class="form-check mb-3">
+                <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="subscribe"
+                    onclick="toggleSubscribeMessage()"
+                />
+                <label class="form-check-label" for="subscribe">訂閱最新消息</label>
+            </div>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">送出</button>
+                <button type="reset" class="btn btn-secondary">清除</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- 社交媒體區塊 -->
+    <!-- <section id="social-media" class="mb-5">
+    <h2 class="text-info text-center mb-4">社交媒體</h2>
+    <div class="d-flex justify-content-center">
+        <a href="https://github.com/e1104180174" class="text-dark mx-3" target="_blank"
+        ><i class="fab fa-github fa-3x"></i
+        ></a>
+        <a href="https://www.facebook.com/profile.php?id=61575492135266" class="text-dark mx-3" target="_blank"
+        ><i class="fab fa-facebook fa-3x"></i
+        ></a>
+        <a href="#" class="text-dark mx-3" target="_blank"
+        ><i class="fab fa-linkedin fa-3x"></i
+        ></a>
+    </div>
+    </section> -->
+</main>
+
+<!-- 回到頂部按鈕 -->
+<button id="backToTop" class="btn btn-primary rounded-circle">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center mt-5 py-3">
+    <p>&copy; 2025 羅晨瑋</p>
+    <p>
+    信箱:
+    <a href="mailto:e1104181074@gm.lhu.edu.tw" class="text-white">e1104181074@gm.lhu.edu.tw</a>
+    </p>
+    <p>
+    地址:
+    <a href="https://maps.app.goo.gl/epxRomhBr9aR5zFS8" class="text-white" target="_blank"
+        >333桃園市龜山區萬壽路一段300號</a
+    >
+    </p>
+    <div>
+    <a href="https://github.com/e1104180174" class="text-white mx-2" target="_blank"
+        ><i class="fab fa-github fa-2x"></i
+    ></a>
+    <a href="https://www.youtube.com/@ChenWeiLuo" class="text-white mx-2" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+    <a href="https://www.linkedin.com/in/chen-wei-luo-93572233a/" class="text-white mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+</footer>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"
+></script>
+<script src="js/script.js"></script>
+</body>
+</html>

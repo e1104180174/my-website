@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羅晨瑋的學習網站</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 固定 Header -->
+    <header class="bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">羅晨瑋的學習網站</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link font-weight-bold active" href="index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="about.html">關於我</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="work.html">作品集</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">聯絡我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主內容 -->
+    <main class="container mt-5">
+        <h1 class="text-center text-primary  mb-5">作品集</h1>
+
+        <!-- 分類按鈕 -->
+        <div class="text-center mb-4">
+            <button class="btn btn-outline-primary filter-btn" data-filter="all">All</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="category-network">網際網路</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="category-project">專題實作</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="category-ai">AI技術</button>
+        </div>
+
+        <!-- 作品集區塊 -->
+        <div class="row" id="work-gallery">
+            <div class="col-md-4 mb-4 filter-item category-network">
+                <div class="card">
+                    <a href="https://docs.google.com/document/d/1JDqSazcp87Yb0mZKyaD8hxfDmauXl3ds7KnOJnyKO2g/edit?usp=sharing" target="_blank">
+                        <img src="images/work1.png" class="card-img-top" alt="Work 1">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://docs.google.com/document/d/1JDqSazcp87Yb0mZKyaD8hxfDmauXl3ds7KnOJnyKO2g/edit?usp=sharing" target="_blank" class="text-decoration-none">
+                            <h5 class="card-title">網站建構與管理</h5>
+                        </a>
+                        <p class="card-text">在Linux系統進行網站建構與管理，使用PHP實作具有SQL功能的網站</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 filter-item category-project">
+                <div class="card">
+                    <a href="https://docs.google.com/document/d/1gd45djSKvNr0nCGmqvFcF0prxaDoq6DeIJ8v4cTARy4/edit?usp=sharing" target="_blank">
+                        <img src="images/work2.png" class="card-img-top" alt="Work 2">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://docs.google.com/document/d/1gd45djSKvNr0nCGmqvFcF0prxaDoq6DeIJ8v4cTARy4/edit?usp=sharing" target="_blank" class="text-decoration-none">
+                            <h5 class="card-title">遊戲專題實作</h5>
+                        </a>
+                        <p class="card-text">使用Unity從零開始實作一款簡易的遊戲，嘗試設計創意的特殊功能</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 filter-item category-ai">
+                <div class="card">
+                    <a href="https://drive.google.com/drive/folders/15SgiQsgR_DRtmylj1MboV0xeI_ZVRvFo?usp=drive_link" target="_blank">
+                        <img src="images/work3.png" class="card-img-top" alt="Work 3">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://drive.google.com/drive/folders/15SgiQsgR_DRtmylj1MboV0xeI_ZVRvFo?usp=drive_link" target="_blank" class="text-decoration-none">
+                            <h5 class="card-title">AI影像識別</h5>
+                        </a>
+                        <p class="card-text">使用MediaPipe進行AI影像識別，捕捉人物動作，並製作簡易小遊戲</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 filter-item category-network">
+                <div class="card">
+                    <a href="https://docs.google.com/document/d/1sy8Y6CJZ_MJE91eXb_Y_KHdV_--gwNCM1z9Kd0uDuZA/edit?usp=sharing" target="_blank">
+                        <img src="images/work4.png" class="card-img-top" alt="Work 4">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://docs.google.com/document/d/1sy8Y6CJZ_MJE91eXb_Y_KHdV_--gwNCM1z9Kd0uDuZA/edit?usp=sharing" target="_blank" class="text-decoration-none">
+                            <h5 class="card-title">路由器設定練習</h5>
+                        </a>
+                        <p class="card-text">在Cisco Packet Tracer上練習路由器基礎設定</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 filter-item category-project">
+                <div class="card">
+                    <a href="https://docs.google.com/document/d/1WAwmN5tu9NrLcW9TXgXbBq-MWzPAyXNRUL1fBiVYcjg/edit?usp=sharing" target="_blank">
+                        <img src="images/work5.png" class="card-img-top" alt="Work 5">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://docs.google.com/document/d/1WAwmN5tu9NrLcW9TXgXbBq-MWzPAyXNRUL1fBiVYcjg/edit?usp=sharing" target="_blank" class="text-decoration-none">
+                            <h5 class="card-title">AR擴增實境專題實作</h5>
+                        </a>
+                        <p class="card-text">使用MAKAR製作能在行動裝置上執行的AR擴增實境，嘗試拼圖式程式設計</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 filter-item category-ai">
+                <div class="card">
+                    <a href="https://drive.google.com/file/d/16x_P2tPg0B6ZiZ3w3yvV0Y-qmw8TWMpW/view?usp=drive_link" target="_blank">
+                        <img src="images/work6.png" class="card-img-top" alt="Work 6">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://drive.google.com/file/d/16x_P2tPg0B6ZiZ3w3yvV0Y-qmw8TWMpW/view?usp=drive_link" target="_blank" class="text-decoration-none">
+                            <h5 class="card-title">AI虛擬主播</h5>
+                        </a>
+                        <p class="card-text">利用AI模型生成圖片、文字、語音、表情等，建立一個幾乎由AI模擬出來的虛擬主播</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="backToTop" class="btn btn-primary rounded-circle">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center mt-5 py-3">
+        <p>&copy; 2025 羅晨瑋</p>
+        <p>信箱: <a href="mailto:e1104181074@gm.lhu.edu.tw" class="text-white">e1104181074@gm.lhu.edu.tw</a></p>
+        <p>地址: <a href="https://maps.app.goo.gl/epxRomhBr9aR5zFS8" class="text-white" target="_blank">333桃園市龜山區萬壽路一段300號</a></p>
+        <div>
+            <a href="https://github.com/e1104180174" class="text-white mx-2" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.youtube.com/@ChenWeiLuo" class="text-white mx-2" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/chen-wei-luo-93572233a/" class="text-white mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // 篩選功能
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const filterItems = document.querySelectorAll('.filter-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+
+                filterItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // 更新按鈕的活動狀態
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
