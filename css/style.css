@@ -5,7 +5,7 @@ body {
     color: #0E2431;
     background: url('../images/background-texture.png') repeat; /* 平鋪背景圖片 */
     background-size: auto; /* 保持圖片原始大小 */
-    background-color: rgba(255, 255, 255, 0.7); /* 添加白色半透明背景 */
+    background-color: rgba(255, 255, 255, 0.8); /* 添加白色半透明背景 */
     background-blend-mode: lighten; /* 淡化背景圖片，讓其更白 */
 }
 
@@ -321,6 +321,25 @@ section {
 
 .modal-header .btn-close:hover {
     background-color: #f8f9fa; /* 滑過時的顏色 */
+}
+
+/* 分類按鈕樣式 */
+.filter-btn {
+    background-color: #ffffff; /* 設定背景為白色 */
+    color: #4070F4; /* 按鈕文字顏色 */
+    border: 1px solid #4070F4; /* 邊框顏色 */
+}
+
+.filter-btn:hover {
+    background-color: #f8f9fa; /* 滑過時的背景顏色 */
+    color: #365eab; /* 滑過時的文字顏色 */
+    border-color: #365eab; /* 滑過時的邊框顏色 */
+}
+
+.filter-btn.active {
+    background-color: #4070F4; /* 活動按鈕的背景顏色 */
+    color: #ffffff; /* 活動按鈕的文字顏色 */
+    border-color: #4070F4; /* 活動按鈕的邊框顏色 */
 }
 
 @media (max-width: 768px) {
