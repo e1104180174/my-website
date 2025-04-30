@@ -3,7 +3,7 @@ body {
     font-family: 'Noto Sans TC', 'Poppins', sans-serif;
     padding-top: 70px; /* 根據 header 的高度調整 */
     color: #0E2431;
-    background: url('/images/background-texture.png') repeat; /* 平鋪背景圖片 */
+    background: url('../images/background-texture.png') repeat; /* 平鋪背景圖片 */
     background-size: auto; /* 保持圖片原始大小 */
     background-color: rgba(255, 255, 255, 0.7); /* 添加白色半透明背景 */
     background-blend-mode: lighten; /* 淡化背景圖片，讓其更白 */
