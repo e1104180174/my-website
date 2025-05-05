@@ -1,5 +1,3 @@
-// filepath: /bootstrap-web-project/bootstrap-web-project/js/main.js
-
 // Toggling Menu
 const toggleMenu = () => {
     const toggle = document.getElementById('navbar-toggle');
@@ -27,57 +25,50 @@ function activateLink() {
 
 navLinks.forEach(link => link.addEventListener('click', activateLink));
 
-// 回到頂部按鈕功能
-const backToTopButton = document.getElementById('backToTop');
+// 初始化回到頂部按鈕功能
+function initBackToTopButton() {
+    const backToTopButton = document.getElementById('backToTop');
+    if (!backToTopButton) return;
 
-// 監聽滾動事件
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-
-    // 當滾動超過 200px 時顯示按鈕，否則隱藏
-    if (scrollPosition > 200) {
-        backToTopButton.classList.add('show');
-        backToTopButton.classList.remove('hide');
-    } else {
-        backToTopButton.classList.add('hide');
-        backToTopButton.classList.remove('show');
-    }
-});
-
-// 點擊按鈕回到頂部
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // 平滑滾動效果
+    // 監聽滾動事件
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
     });
-});
 
-// 切換訂閱訊息
-function toggleSubscribeMessage() {
-    const subscribeCheckbox = document.getElementById('subscribe');
-    const subscribeMessage = document.getElementById('subscribeMessage');
-
-    if (subscribeCheckbox.checked) {
-        subscribeMessage.value = "已訂閱最新消息";
-    } else {
-        subscribeMessage.value = ""; // 清空值，表示未訂閱
-    }
+    // 點擊按鈕回到頂部
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }
 
-// 表單提交處理
-function handleFormSubmit() {
-    const subscribeMessage = document.getElementById('subscribeMessage').value;
+// 動態載入 Header 和 Footer
+function loadHeaderAndFooter() {
+    // 載入 Header
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
 
-    // 如果未訂閱，移除該欄位，避免傳送空值
-    if (!subscribeMessage) {
-        document.getElementById('subscribeMessage').remove();
-    }
+    // 載入 Footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
 
-    return true; // 允許表單提交
+            // 初始化回到頂部按鈕功能
+            initBackToTopButton();
+        })
+        .catch(error => console.error('Error loading footer:', error));
 }
 
 // 燈箱圖片顯示功能
-document.addEventListener('DOMContentLoaded', () => {
+function initLightbox() {
     const lightboxModal = document.getElementById('lightboxModal');
     const lightboxImage = document.getElementById('lightboxImage');
     const carousel = document.getElementById('carouselExampleIndicators');
@@ -102,4 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
             lightboxImage.src = ''; // 清空圖片來源
         });
     }
+}
+
+// 初始化功能
+document.addEventListener('DOMContentLoaded', () => {
+    loadHeaderAndFooter(); // 動態載入 Header 和 Footer
+    initLightbox(); // 初始化燈箱功能
 });
