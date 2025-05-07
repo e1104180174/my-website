@@ -1,3 +1,4 @@
+/* ========== 全域樣式 ========== */
 body {
     font-size: 1.125rem; /* 將全域文字大小設為 18px，比預設的 16px 更大 */
     font-family: 'Noto Sans TC', 'Poppins', sans-serif;
@@ -7,31 +8,6 @@ body {
     background-size: auto; /* 保持圖片原始大小 */
     background-color: rgba(255, 255, 255, 0.8); /* 添加白色半透明背景 */
     background-blend-mode: lighten; /* 淡化背景圖片，讓其更白 */
-}
-
-/* 固定 header 並添加霧面效果 */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1030; /* 確保 header 在最上層 */
-    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
-    backdrop-filter: blur(10px); /* 霧面效果 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影 */
-}
-
-.navbar {
-    background-color: #ffffff;
-}
-
-.nav-link {
-    color: #0E2431;
-    font-size: 1.1rem;
-}
-
-.nav-link:hover {
-    color: #4070F4;
 }
 
 section {
@@ -56,7 +32,32 @@ section {
     background-color: #365eab;
 }
 
-/* 背景影片樣式 */
+/* ========== Header (header.html) ========== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* 確保 header 在最上層 */
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 霧面效果 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+}
+
+.navbar {
+    background-color: #ffffff;
+}
+
+.nav-link {
+    color: #0E2431;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: #4070F4;
+}
+
+/* ========== Home (index.html) ========== */
 .video-background {
     position: absolute; /* 改為絕對定位 */
     top: 0;
@@ -80,7 +81,6 @@ section {
     filter: grayscale(70%); /* 灰濛效果 */
 }
 
-/* Home 區塊內容樣式 */
 #home {
     position: relative;
     min-height: calc(100vh - 70px); /* 減去 header 的高度，確保內容不被遮擋 */
@@ -147,7 +147,7 @@ section {
     color: #4070F4; /* 滑過時的顏色 */
 }
 
-/* Carousel 樣式 */
+/* ========== Carousel (index.html) ========== */
 #carousel {
     position: relative;
     z-index: 1; /* 確保 #carousel 區塊內容在背景影片上方 */
@@ -191,25 +191,54 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 圖片陰影 */
 }
 
-#about img, #skills img, #work img {
+/* ========== About (about.html) ========== */
+#about img {
     border-radius: 20px;
 }
 
-#about .row, #skills .row {
+#about .row {
     align-items: center;
 }
 
+/* ========== Skills (about.html) ========== */
+#skills img {
+    border-radius: 20px;
+}
+
+#skills .row {
+    align-items: center;
+}
+
+/* ========== Work (work.html) ========== */
 #work .row .col-md-4 {
     margin-bottom: 1rem;
 }
 
-/* 地圖容器樣式 */
+.filter-btn {
+    background-color: #ffffff; /* 設定背景為白色 */
+    color: #4070F4; /* 按鈕文字顏色 */
+    border: 1px solid #4070F4; /* 邊框顏色 */
+}
+
+.filter-btn:hover {
+    background-color: #f8f9fa; /* 滑過時的背景顏色 */
+    color: #365eab; /* 滑過時的文字顏色 */
+    border-color: #365eab; /* 滑過時的邊框顏色 */
+}
+
+.filter-btn.active {
+    background-color: #4070F4; /* 活動按鈕的背景顏色 */
+    color: #ffffff; /* 活動按鈕的文字顏色 */
+    border-color: #4070F4; /* 活動按鈕的邊框顏色 */
+}
+
+/* ========== Contact (contact.html) ========== */
 .map-container {
     position: relative;
     width: 100%;
-    max-width: 800px; /* 限制地圖最大寬度 */
+    max-width: 800px;
     padding-top: 56.25%; /* 16:9 比例 */
-    margin: 0 auto; /* 置中 */
+    margin: 0 auto;
 }
 
 .map-container iframe {
@@ -221,14 +250,15 @@ section {
     border: 0;
 }
 
-/* 移除 Bootstrap 的 ::before 樣式影響 */
+/* 修正 Bootstrap 樣式衝突 */
 .embed-responsive-16by9::before {
     content: none;
 }
 
-.footer {
-    background-color: #0E2431;
-    color: #ffffff;
+/* ========== Footer (footer.html) ========== */
+footer {
+    background-color: #0E2431; /* 深灰色背景 */
+    color: #ffffff; /* 預設文字顏色 */
     text-align: center;
     padding: 2rem 0;
 }
@@ -238,72 +268,52 @@ section {
     margin-bottom: 1rem;
 }
 
-/* 回到頂部按鈕樣式 */
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    display: none; /* 預設隱藏 */
-    justify-content: center;
-    align-items: center;
-    z-index: 1050;
-    background-color: #4070F4;
-    color: #fff;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+footer a.footer-link {
+    text-decoration: none; /* 移除底線 */
+    color: #d1d1d1; /* 預設灰色文字 */
+    transition: color 0.3s ease; /* 平滑變色效果 */
 }
 
-#backToTop:hover {
-    background-color: #365eab;
-    cursor: pointer;
+footer a.footer-link:hover {
+    color: #a8a8a8; /* 滑鼠懸停時變成更深的灰色 */
 }
 
-#backToTop i {
-    font-size: 1.5rem;
+/* Footer 圖示區塊樣式 */
+footer .social-icons a.social-link {
+    text-decoration: none; /* 移除底線 */
+    color: #d1d1d1; /* 預設灰色圖示 */
+    transition: color 0.3s ease; /* 平滑變色效果 */
 }
 
-/* 淡入淡出效果 */
-#backToTop.show {
-    display: flex; /* 顯示按鈕 */
-    opacity: 1;
-    visibility: visible;
+footer .social-icons a.social-link:hover {
+    color: #a8a8a8; /* 滑鼠懸停時圖示變成更深的灰色 */
 }
 
-#backToTop.hide {
-    opacity: 0;
-    visibility: hidden;
-}
-
-/* 燈箱圖片樣式 */
+/* ========== Lightbox (about.html, index.html) ========== */
 #lightboxImage {
-    max-width: 90vw; /* 限制圖片寬度為視窗寬度的 90% */
-    max-height: 90vh; /* 限制圖片高度為視窗高度的 90% */
-    width: auto; /* 確保圖片寬高比例不變 */
-    height: auto; /* 確保圖片寬高比例不變 */
-    border-radius: 10px; /* 圓角效果 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 燈箱背景樣式 */
 .modal-dialog {
-    max-width: 90vw; /* 限制燈箱寬度為視窗寬度的 90% */
-    margin: auto; /* 確保燈箱在畫面正中心 */
+    max-width: 90vw;
+    margin: auto;
 }
 
 .modal-content {
-    background-color: rgba(0, 0, 0, 0.8); /* 深色背景 */
+    background-color: rgba(0, 0, 0, 0.8);
     border: none;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0; /* 移除內距 */
+    padding: 20px 0;
 }
 
-/* 修正關閉按鈕位置 */
 .modal-header {
     position: absolute;
     top: 10px;
@@ -323,29 +333,49 @@ section {
     background-color: #f8f9fa; /* 滑過時的顏色 */
 }
 
-/* 分類按鈕樣式 */
-.filter-btn {
-    background-color: #ffffff; /* 設定背景為白色 */
-    color: #4070F4; /* 按鈕文字顏色 */
-    border: 1px solid #4070F4; /* 邊框顏色 */
+/* ========== Back to Top (footer.html) ========== */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    background-color: #4070F4;
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.filter-btn:hover {
-    background-color: #f8f9fa; /* 滑過時的背景顏色 */
-    color: #365eab; /* 滑過時的文字顏色 */
-    border-color: #365eab; /* 滑過時的邊框顏色 */
+#backToTop:hover {
+    background-color: #365eab;
+    cursor: pointer;
 }
 
-.filter-btn.active {
-    background-color: #4070F4; /* 活動按鈕的背景顏色 */
-    color: #ffffff; /* 活動按鈕的文字顏色 */
-    border-color: #4070F4; /* 活動按鈕的邊框顏色 */
+#backToTop i {
+    font-size: 1.5rem;
 }
 
+#backToTop.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ========== 行動裝置樣式調整 ========== */
 @media (max-width: 768px) {
     #home {
-        min-height: auto; /* 手機上取消固定高度 */
-        padding-top: 100px; /* 增加內距，避免被 header 遮擋 */
+        min-height: auto;
+        padding-top: 100px;
     }
 
     #home .display-4 {
@@ -353,7 +383,7 @@ section {
     }
 
     #home .display-3 {
-        font-size: 2rem; /* 調整標題字體大小以適應小螢幕 */
+        font-size: 2rem;
     }
 
     #home img {
@@ -362,15 +392,15 @@ section {
     }
 
     #home p {
-        font-size: 1rem; /* 調整段落文字大小 */
+        font-size: 1rem;
     }
 
     #home .btn {
-        font-size: 1rem; /* 調整按鈕文字大小 */
+        font-size: 1rem;
     }
 
     .map-container {
-        max-width: 100%; /* 手機上地圖寬度自適應 */
-        padding-top: 75%; /* 調整比例以適應小螢幕 */
+        max-width: 100%;
+        padding-top: 75%;
     }
 }
