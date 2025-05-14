@@ -375,28 +375,11 @@ footer .social-icons a.social-link:hover {
 @media (max-width: 768px) {
     #home {
         min-height: auto;
-        padding-top: 100px;
-    }
-
-    #home .display-4 {
-        font-size: 2rem;
-    }
-
-    #home .display-3 {
-        font-size: 2rem;
     }
 
     #home img {
         width: 100%;
         height: auto;
-    }
-
-    #home p {
-        font-size: 1rem;
-    }
-
-    #home .btn {
-        font-size: 1rem;
     }
 
     .map-container {
