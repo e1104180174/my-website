@@ -88,7 +88,7 @@ header {
     align-items: center; /* 垂直置中 */
     justify-content: center; /* 水平置中 */
     text-align: left;
-    padding: 0 15px; /* 增加左右內距 */
+    padding: 15px; /* 增加內距 */
     overflow: hidden; /* 確保內容不會超出區塊 */
 }
 
