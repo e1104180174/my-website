@@ -371,6 +371,20 @@ footer .social-icons a.social-link:hover {
     visibility: hidden;
 }
 
+/* ========== Flex 樣式設計 ========== */
+.flex-title {
+    display: flex;
+    flex-wrap: wrap; /* 當寬度不足時換行 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    gap: 0.5rem; /* 元素之間的間距 */
+    text-align: center; /* 文字置中 */
+}
+
+.flex-title .name {
+    white-space: nowrap; /* 確保「羅晨瑋」不被切割 */
+}
+
 /* ========== 行動裝置樣式調整 ========== */
 @media (max-width: 768px) {
     #home {
